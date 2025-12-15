@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="fenetre" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurRevisionGrille">
+    <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+        <top>
+            <GridPane BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <Label fx:id="chronoLabel" text="00:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="logoInformation" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicInformations" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0" />
+                    </GridPane.margin>
+                    <Image url="@../images/info.png" />
+                </ImageView>
+                <ImageView fx:id="logoParametre" fitHeight="69.0" fitWidth="69.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#gererClicParametres" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                    </GridPane.margin>
+                    <Image url="@../images/param.png" />
+                </ImageView>
+            </GridPane>
+        </top>
+        <bottom>
+            <GridPane BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="800.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <Button id="couleurTheme" fx:id="buttonRetour" mnemonicParsing="false" onAction="#gererClicRetour" prefHeight="65.0" prefWidth="180.0" text="Retour" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+                <ScrollPane prefHeight="90.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="2155.0">
+                        <HBox fx:id="containerPropositions" prefHeight="75.0" prefWidth="2155.0" spacing="10.0">
+                            <padding>
+                                <Insets bottom="20.0" left="2.0" top="2.0" />
+                            </padding>
+                        </HBox>
+                    </AnchorPane>
+                </ScrollPane>
+            </GridPane>
+        </bottom>
+        <center>
+            <GridPane fx:id="gridPanePicto" BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="780.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="SOMETIMES" />
+                    <RowConstraints vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <GridPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" prefWidth="260.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" prefWidth="260.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" prefWidth="260.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <GridPane GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label fx:id="points" alignment="CENTER" contentDisplay="TOP" prefHeight="75.0" prefWidth="180.0" text="Points : 0" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Label>
+                    </GridPane>
+                    <Button id="couleurTheme" fx:id="buttonRestart" mnemonicParsing="false" onAction="#gererClicRestart" prefHeight="75.0" prefWidth="180.0" text="Restart" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <styleClass>
+                     <String fx:value="element" />
+                     <String fx:value="border" />
+                  </styleClass></Button>
+                    <Button id="couleurTheme" fx:id="buttonValider" layoutX="160.0" layoutY="24.0" mnemonicParsing="false" onAction="#gererClicValider" prefHeight="75.0" prefWidth="180.0" text="Valider" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <styleClass>
+                     <String fx:value="element" />
+                     <String fx:value="border" />
+                  </styleClass></Button>
+                </GridPane>
+
+                <ScrollPane fx:id="scrollPane" GridPane.columnIndex="1" GridPane.rowSpan="2">
+
+                    <AnchorPane>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                        <GridPane fx:id="conteneurGrille">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+
+                            <StackPane id="17" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="18" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="19" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="0" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="6" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="7" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="8" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="9" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="20" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="21" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="22" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="23" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="24" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="25" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="26" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="10" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="11" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="12" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="13" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="14" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="15" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="16" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="4" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="5" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="1" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="2" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <StackPane id="3" layoutX="60.0" layoutY="9.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Rectangle arcHeight="5" arcWidth="5" fill="transparent" height="46.0" mouseTransparent="true" stroke="black" strokeWidth="3" width="46.0" />
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/vide.png" />
+                                </ImageView>
+                            </StackPane>
+
+                            <Line endX="268.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="4" GridPane.columnSpan="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                            <Line endX="69.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="12" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                            <Line endX="69.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="15" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                            <Line endX="360.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="8" GridPane.columnSpan="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                            <Line endX="160.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnSpan="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                            <Line endX="13.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets left="20.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="12.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets right="20.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="13.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets left="20.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="12.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets right="20.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="160.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="80.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                            <Line endX="80.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="11" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                            <Line endX="160.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="15" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                            <Line endX="14.0" rotate="90.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                <GridPane.margin>
+                                    <Insets bottom="25.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="131.0" rotate="90.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="4" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets top="17.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="120.0" rotate="90.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="4" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="120.0" rotate="90.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="4" GridPane.valignment="CENTER">
+                                <GridPane.margin>
+                                    <Insets />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="NAVY" strokeWidth="3.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="12.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                <GridPane.margin>
+                                    <Insets bottom="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="12.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                                <GridPane.margin>
+                                    <Insets bottom="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="28.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                            <Line endX="80.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="3" GridPane.valignment="CENTER" />
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="28.0" rotate="90.0" stroke="#00bc26" strokeWidth="3.0" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <Line endX="14.0" rotate="90.0" stroke="#ffd500" strokeWidth="3.0" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                <GridPane.margin>
+                                    <Insets top="26.0" />
+                                </GridPane.margin>
+                            </Line>
+                        </GridPane>
+                    </AnchorPane>
+                </ScrollPane>
+            </GridPane>
+        </center>
+    </BorderPane>
+    <Pane fx:id="overlayDrag" pickOnBounds="false" />
+</StackPane>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="fenetre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurScenarioFixeComplet">
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label fx:id="chronoLabel" text="00:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <ImageView fx:id="logoInformation" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicInformation" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets left="10.0" top="10.0" />
+                </GridPane.margin>
+                <Image url="@../images/info.png" />
+            </ImageView>
+            <ImageView fx:id="logoParametre" fitHeight="69.0" fitWidth="69.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#gererClicParametres" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets right="10.0" top="10.0" />
+                </GridPane.margin>
+                <Image url="@../images/param.png" />
+            </ImageView>
+        </GridPane>
+    </top>
+    <bottom>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="800.0" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Button id="couleurTheme" fx:id="buttonRetour" mnemonicParsing="false" onAction="#gererClicRetour" prefHeight="65.0" prefWidth="180.0" text="Retour" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+            <styleClass>
+               <String fx:value="element" />
+               <String fx:value="border" />
+            </styleClass></Button>
+            <ScrollPane prefHeight="90.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="2155.0">
+                    <HBox fx:id="containerPropositions" prefHeight="75.0" prefWidth="2155.0" spacing="10.0" styleClass="element">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" top="2.0" />
+                        </padding>
+                    </HBox>
+                </AnchorPane>
+            </ScrollPane>
+        </GridPane>
+    </bottom>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="750.0" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="400.0" vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+            </rowConstraints>
+            <GridPane fx:id="gererClicValider" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="150.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="150.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="300.0" vgrow="SOMETIMES" />
+                    <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <StackPane maxHeight="400.0" maxWidth="900.0" styleClass="element" GridPane.columnSpan="11" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="900.0" StackPane.alignment="CENTER" />
+                    <Label fx:id="scenarioTextLabel" alignment="CENTER" prefHeight="280.0" prefWidth="900.0" textAlignment="CENTER" wrapText="true" StackPane.alignment="TOP_CENTER">
+                        <padding>
+                            <Insets bottom="5.0" left="8.0" right="5.0" top="5.0" />
+                        </padding>
+                        <font>
+                            <Font size="26.0" />
+                        </font>
+                    </Label>
+                </StackPane>
+                <GridPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <StackPane maxHeight="46.0" maxWidth="46.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets />
+                        </GridPane.margin>
+                        <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="75.0" mouseTransparent="true" stroke="BLACK" strokeWidth="3.0" width="75.0" />
+                        <ImageView fx:id="imageView1" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </ImageView>
+                    </StackPane>
+                </GridPane>
+                <GridPane layoutX="53.0" layoutY="140.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <StackPane maxHeight="46.0" maxWidth="46.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets />
+                        </GridPane.margin>
+                        <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="75.0" mouseTransparent="true" stroke="BLACK" strokeWidth="3.0" width="75.0" />
+                        <ImageView fx:id="imageView2" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </ImageView>
+                    </StackPane>
+                </GridPane>
+                <GridPane layoutX="128.0" layoutY="140.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <StackPane maxHeight="46.0" maxWidth="46.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets />
+                        </GridPane.margin>
+                        <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="75.0" mouseTransparent="true" stroke="BLACK" strokeWidth="3.0" width="75.0" />
+                        <ImageView fx:id="imageView3" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </ImageView>
+                    </StackPane>
+                </GridPane>
+                <GridPane layoutX="53.0" layoutY="140.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <StackPane maxHeight="46.0" maxWidth="46.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets />
+                        </GridPane.margin>
+                        <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="75.0" mouseTransparent="true" stroke="BLACK" strokeWidth="3.0" width="75.0" />
+                        <ImageView fx:id="imageView4" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </ImageView>
+                    </StackPane>
+                </GridPane>
+                <GridPane layoutX="53.0" layoutY="140.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <StackPane maxHeight="75.0" maxWidth="75.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets />
+                        </GridPane.margin>
+                        <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="75.0" mouseTransparent="true" stroke="BLACK" strokeWidth="3.0" width="75.0" />
+                        <ImageView fx:id="imageView5" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </ImageView>
+                    </StackPane>
+                </GridPane>
+            </GridPane>
+            <GridPane alignment="CENTER" maxWidth="900.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" />
+                    <ColumnConstraints hgrow="SOMETIMES" />
+                    <ColumnConstraints hgrow="SOMETIMES" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints prefHeight="75.0" vgrow="ALWAYS" />
+                    <RowConstraints />
+                </rowConstraints>
+                <GridPane alignment="TOP_CENTER" GridPane.valignment="TOP">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <Label fx:id="pointsLabel" alignment="CENTER" prefHeight="75.0" prefWidth="180.0" text="Points : 0" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                  <styleClass>
+                     <String fx:value="element" />
+                     <String fx:value="border" />
+                  </styleClass></Label>
+                </GridPane>
+                <Button id="couleurTheme" fx:id="buttonRestart" mnemonicParsing="false" onAction="#gererClicRestart" prefHeight="75.0" prefWidth="180.0" text="Restart" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+                <Button id="couleurTheme" fx:id="buttonValider" layoutX="160.0" layoutY="24.0" mnemonicParsing="false" onAction="#gererClicValider" prefHeight="75.0" prefWidth="180.0" text="Valider" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+            </GridPane>
+        </GridPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,79 @@
+{
+  "Dans la salle A500, le déjeuner est interrompu par une urgence : un collègue s\u0027étouffe. Sa peau virant au bleu, il est incapable de parler ou de respirer. Je demande à un collègue présent d\u0027appeler les secours. J\u0027interviens immédiatement en exécutant la manœuvre de Heimlich, permettant l\u0027expulsion du corps étranger. Je continue de le surveiller jusqu\u0027à l\u0027arrivée des secours.": [
+    1,
+    11,
+    2,
+    21,
+    3
+  ],
+  "Devant l\u0027IUT, un étudiant traverse la route et se fait renverser. Je m'approche de l\u0027étudiant et il semble avoir de multiple plaies simples au niveau des membres. Je protège les lieux en attendant les secours et le fait s\u0027assoir.": [
+    1,
+    18,
+    6,
+    2,
+    24
+  ],
+  "Dans le local d\u0027entretien, vous entendez des hurlements, en effet, la femme de ménage semble brulé par des produits ménagers. Elle m\u0027indique la zone de la brulure, elle semble se propager sur l\u0027ensemble de son avant bras. J\u0027appelle immédiatement les secours et passe la blessée sous l\u0027eau tiède pour apaiser ses douleurs pendant l\u0027attente.": [
+    1,
+    8,
+    15,
+    2,
+    25
+  ],
+  "Vous êtes dans une salle de cours lorsqu\u0027un étudiant s\u0027effondre soudainement et se met à convulser : il s\u0027agit d’une crise d\u0027épilepsie. Je sécurise immédiatement la zone en éloignant l\u0027étudiant de tout objet pouvant présenter un danger. Je le laisse au sol, sur le dos ou légèrement sur le côté si possible, sans tenter de restreindre ses mouvements. J\u0027appelle ensuite les secours et reste en ligne afin de fournir toutes les informations nécessaires et suivre les consignes jusqu\u0027à leur arrivée.": [
+    0,
+    1,
+    24,
+    2,
+    3
+  ],
+  "Dans les escaliers de l\u0027IUT, un étudiant trébuche et chute lourdement. Il se plaint d’une douleur intense à la jambe et ne peut plus se relever. Je protège la zone pour éviter une autre chute, m\u0027approche pour examiner sa blessure, puis l\u0027aide à se stabiliser sans bouger le membre. J\u0027appelle les secours et le couvre en attendant leur arrivée.": [
+    0,
+    1,
+    16,
+    2,
+    26
+  ],
+  "Pendant le repas, une étudiante tousse violemment et indique qu’un aliment est coincé, mais elle peut encore respirer faiblement. Je l\u0027examine, l\u0027encourage à continuer de tousser, puis la mets en position assise. Un collègue appelle les secours pendant que je surveille son état et me prépare à intervenir si la situation s\u0027aggrave.": [
+    1,
+    11,
+    5,
+    2,
+    13
+  ],
+  "Dans le foyer, un étudiant se coupe profondément la main avec un couteau. Le sang s\u0027écoule abondamment. Je supprime le danger en retirant le couvert, protège l\u0027espace, comprime immédiatement la plaie et demande à quelqu\u0027un d\u0027appeler les secours. Je maintiens la compression jusqu’à leur arrivée.": [
+    17,
+    0,
+    10,
+    20,
+    2
+  ],
+  "En classe, une étudiante devient soudain confuse, pâle et tremblante. Je l\u0027examine rapidement, lui propose du sucre, puis l\u0027installe confortablement. Tout en surveillant son état, j\u0027appelle les secours": [
+    1,
+    14,
+    5,
+    24,
+    2
+  ],
+  "Un technicien de maintenance reçoit une décharge en touchant un rack mal isolé. Avant de m\u0027approcher, je coupe le courant pour supprimer le danger, puis j\u0027examine la victime, qui est consciente mais confuse. J\u0027appelle les secours et la surveille sans la déplacer.": [
+    7,
+    17,
+    1,
+    14,
+    2
+  ],
+  "Une fumée dense envahit le CRDoc. Un étudiant est allongé au sol et ne bouge pas. Je l\u0027évacue vers l\u0027extérieur, puis vérifie sa respiration. L\u0027étudiant respire donc je le place en position latérale de sécurité pendant que quelqu\u0027un appelle les secours.": [
+    9,
+    19,
+    13,
+    23,
+    2
+  ],
+  "Lors d\u0027un examen, un étudiant s\u0027effondre soudainement et ne respire plus. Je protège les lieux, vérifie l\u0027absence de respiration, demande à quelqu\u0027un d’appeler les secours et d’apporter le défibrillateur. Je commence immédiatement le massage cardiaque.": [
+    0,
+    4,
+    12,
+    22,
+    2
+  ]
+}

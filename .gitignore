@@ -1,0 +1,22 @@
+# Fichiers et dossiers générés par Maven
+/target/
+
+# Fichiers et dossiers spécifiques à IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Fichiers et dossiers spécifiques à VS Code
+.vscode/
+
+# Fichiers de métadonnées du système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Fichier application
+/data/*
+*.txt
+
+# Fichiers générés par Maven Shade Plugin
+dependency-reduced-pom.xml

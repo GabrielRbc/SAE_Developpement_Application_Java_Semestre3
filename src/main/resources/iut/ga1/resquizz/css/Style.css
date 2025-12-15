@@ -1,0 +1,12 @@
+/* Style global pour certains composants */
+.element {
+    -fx-background-color: #FFFFFF;
+}
+
+.element2 {
+    -fx-background-color: #C8C8C8;
+}
+
+.border {
+    -fx-border-color : black;
+}

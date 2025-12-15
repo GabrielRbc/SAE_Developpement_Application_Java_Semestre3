@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="fenetre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurMenuJeux">
+   <center>
+       <VBox alignment="CENTER" prefHeight="125.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+           <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0">
+               <Button fx:id="buttonGrille" mnemonicParsing="false" onAction="#gererClicRevisionGrille" prefHeight="75.0" prefWidth="300.0" text="Révision de la grille">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+           </HBox>
+           <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0">
+               <Button fx:id="buttonQCM" mnemonicParsing="false" onAction="#gererClicQCM" prefHeight="75.0" prefWidth="300.0" text="QCM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+           </HBox>
+           <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0">
+               <Button fx:id="buttonScenarioFixe" mnemonicParsing="false" onAction="#gererClicScenarioFixeComplet" prefHeight="75.0" prefWidth="300.0" text="Scénario Fixe" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+           </HBox>
+           <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0">
+               <Button fx:id="buttonScenarioAlea" mnemonicParsing="false" onAction="#gererClicScenarioAleaPaP" prefHeight="75.0" prefWidth="300.0" text="Scénario Aléatoire" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass></Button>
+           </HBox>
+       </VBox>
+   </center>
+   <top>
+       <GridPane BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <Label fx:id="titre" alignment="CENTER" contentDisplay="CENTER" text="Selectionner un jeu" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+              <font>
+                  <Font size="36.0" />
+              </font>
+              <GridPane.margin>
+                  <Insets bottom="10.0" />
+              </GridPane.margin>
+           </Label>
+           <ImageView fx:id="logoInformation" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicInformation" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                   <Insets left="10.0" top="10.0" />
+               </GridPane.margin>
+               <Image url="@../images/info.png" />
+           </ImageView>
+           <ImageView fx:id="logoParametre" fitHeight="69.0" fitWidth="69.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#gererClicParametres" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                   <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+               <Image url="@../images/param.png" />
+           </ImageView>
+       </GridPane>
+   </top>
+   <bottom>
+       <GridPane BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <Button fx:id="buttonRetour" mnemonicParsing="false" onAction="#gererClicRetour" prefHeight="65.0" prefWidth="180.0" text="Retour" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+            <styleClass>
+               <String fx:value="element" />
+               <String fx:value="border" />
+            </styleClass></Button>
+           <ImageView fx:id="logoClassement" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicClassement" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                   <Insets bottom="10.0" left="10.0" />
+               </GridPane.margin>
+               <Image url="@../images/classement.png" />
+           </ImageView>
+       </GridPane>
+   </bottom>
+</BorderPane>

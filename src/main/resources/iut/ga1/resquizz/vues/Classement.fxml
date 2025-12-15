@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane fx:id="fenetre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurClassement">
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="400.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="100.0" />
+            </rowConstraints>
+            <ImageView fx:id="logoInformation" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicInformations" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets left="10.0" top="10.0" />
+                </GridPane.margin>
+                <Image url="@../images/info.png" />
+            </ImageView>
+            <ImageView fx:id="logoParametre" fitHeight="69.0" fitWidth="69.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#gererClicParametres" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets right="10.0" top="10.0" />
+                </GridPane.margin>
+                <Image url="@../images/param.png" />
+            </ImageView>
+        </GridPane>
+    </top>
+    <bottom>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" prefWidth="370.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="100.0" />
+            </rowConstraints>
+            <Button id="couleurTheme" fx:id="buttonRetour" mnemonicParsing="false" onAction="#gererClicRetour" prefHeight="65.0" prefWidth="180.0" text="Retour" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+            <styleClass>
+               <String fx:value="element" />
+               <String fx:value="border" />
+            </styleClass></Button>
+        </GridPane>
+    </bottom>
+    <center>
+        <GridPane alignment="TOP_CENTER">
+            <columnConstraints>
+                <ColumnConstraints maxWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints maxWidth="998.0" prefWidth="998.0" />
+                <ColumnConstraints maxWidth="100.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="475.0" minHeight="10.0" prefHeight="475.0" />
+            </rowConstraints>
+            <StackPane maxWidth="1000.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <GridPane maxWidth="1000.0" StackPane.alignment="TOP_CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints maxWidth="250.0" prefWidth="250.0" />
+                        <ColumnConstraints maxWidth="250.0" prefWidth="250.0" />
+                        <ColumnConstraints maxWidth="250.0" prefWidth="250.0" />
+                        <ColumnConstraints maxWidth="250.0" prefWidth="250.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints prefHeight="100.0" />
+                        <RowConstraints />
+                        <RowConstraints prefHeight="30.0" />
+                        <RowConstraints />
+                        <RowConstraints prefHeight="100.0" />
+                        <RowConstraints />
+                    </rowConstraints>
+                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="6">
+                        <center>
+                            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1000.0" BorderPane.alignment="CENTER" />
+                        </center>
+                        <bottom>
+                            <Line endX="1000.0" BorderPane.alignment="CENTER" />
+                        </bottom>
+                        <right>
+                            <Line endY="410.0" BorderPane.alignment="CENTER" />
+                        </right>
+                        <left>
+                            <Line endY="410.0" BorderPane.alignment="CENTER" />
+                        </left>
+                    </BorderPane>
+                    <StackPane GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="502.0" />
+                        <Label fx:id="score" alignment="CENTER" prefHeight="90.0" prefWidth="502.0" />
+                    </StackPane>
+                    <StackPane layoutX="60.0" layoutY="47.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="502.0" />
+                        <Label fx:id="chrono" alignment="CENTER" prefHeight="90.0" prefWidth="502.0" />
+                    </StackPane>
+                    <GridPane fx:id="modeQCM" alignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="25.0" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="25.0" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="25.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <StackPane maxHeight="20.0" maxWidth="98.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                            <Rectangle fx:id="strokePicto" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                            <Label alignment="CENTER" onMouseClicked="#gererClicPictogramme" prefHeight="50.0" prefWidth="150.0" text="Pictogramme" />
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" maxHeight="20.0" maxWidth="98.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <Rectangle fx:id="strokeDesc" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                            <Label alignment="CENTER" onMouseClicked="#gererClicDescription" prefHeight="50.0" prefWidth="150.0" text="Description" />
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="19.0" maxHeight="20.0" maxWidth="98.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                            <Rectangle fx:id="strokeAlea" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                            <Label alignment="CENTER" onMouseClicked="#gererClicAleatoire" prefHeight="50.0" prefWidth="150.0" text="Aléatoire" />
+                        </StackPane>
+                    </GridPane>
+                    <StackPane maxHeight="65.0" maxWidth="250.0" onMouseClicked="#gererClicRevision" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" stroke="TRANSPARENT" strokeType="INSIDE" width="250.0" />
+                        <Label fx:id="labelGrille" alignment="CENTER" onMouseClicked="#gererClicRevision" prefHeight="65.0" prefWidth="250.0" text="Grille" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_LEFT" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_RIGHT" />
+                        <Line endX="250.0" StackPane.alignment="TOP_CENTER" />
+                        <Line fx:id="lineGrille" endX="250.0" StackPane.alignment="BOTTOM_CENTER" />
+                    </StackPane>
+                    <StackPane maxHeight="65.0" maxWidth="250.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" stroke="TRANSPARENT" strokeType="INSIDE" width="250.0" />
+                        <Label fx:id="labelQCM" alignment="CENTER" onMouseClicked="#gererClicQCM" prefHeight="65.0" prefWidth="250.0" text="QCM" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_LEFT" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_RIGHT" />
+                        <Line endX="250.0" StackPane.alignment="TOP_CENTER" />
+                        <Line fx:id="lineQCM" endX="250.0" StackPane.alignment="BOTTOM_CENTER" />
+                    </StackPane>
+                    <StackPane maxHeight="65.0" maxWidth="250.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" stroke="TRANSPARENT" strokeType="INSIDE" width="250.0" />
+                        <Label fx:id="labelScenarioFixe" alignment="CENTER" onMouseClicked="#gererClicScenarioFixe" prefHeight="65.0" prefWidth="250.0" text="Scénario Fixe" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_LEFT" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_RIGHT" />
+                        <Line endX="250.0" StackPane.alignment="TOP_CENTER" />
+                        <Line fx:id="lineScenarioFixe" endX="250.0" StackPane.alignment="BOTTOM_CENTER" />
+                    </StackPane>
+                    <StackPane maxHeight="65.0" maxWidth="250.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" stroke="TRANSPARENT" strokeType="INSIDE" width="250.0" />
+                        <Label fx:id="labelScenarioAlea" alignment="CENTER" onMouseClicked="#gererClicAleaPaP" prefHeight="65.0" prefWidth="250.0" text="Scénario Aléa" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_LEFT" />
+                        <Line endY="65.0" StackPane.alignment="CENTER_RIGHT" />
+                        <Line endX="250.0" StackPane.alignment="TOP_CENTER" />
+                        <Line fx:id="lineAleaPaP" endX="250.0" StackPane.alignment="BOTTOM_CENTER" />
+                    </StackPane>
+                    <StackPane GridPane.rowIndex="5">
+                        <Button fx:id="resetGrille" mnemonicParsing="false" onAction="#gererClicResetGrille" prefHeight="75.0" prefWidth="180.0" text="Restart" textAlignment="CENTER" wrapText="true" StackPane.alignment="BOTTOM_LEFT">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Button>
+                        <Button fx:id="resetPicto" disable="true" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#gererClicResetPicto" prefHeight="75.0" prefWidth="180.0" text="Restart" textAlignment="CENTER" visible="false" wrapText="true" StackPane.alignment="BOTTOM_LEFT">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Button>
+                        <Button fx:id="resetDesc" disable="true" layoutX="45.0" layoutY="22.0" mnemonicParsing="false" onAction="#gererClicResetDesc" prefHeight="75.0" prefWidth="180.0" text="Restart" textAlignment="CENTER" visible="false" wrapText="true" StackPane.alignment="BOTTOM_LEFT">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Button>
+                        <Button fx:id="resetAlea" disable="true" layoutX="45.0" layoutY="22.0" mnemonicParsing="false" onAction="#gererClicResetAlea" prefHeight="75.0" prefWidth="180.0" text="Restart" textAlignment="CENTER" visible="false" wrapText="true" StackPane.alignment="BOTTOM_LEFT">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Button>
+                        <Button fx:id="resetScenarioFixe" disable="true" layoutX="45.0" layoutY="22.0" mnemonicParsing="false" onAction="#gererClicResetScenarioFixe" prefHeight="75.0" prefWidth="180.0" text="Restart" textAlignment="CENTER" visible="false" wrapText="true" StackPane.alignment="BOTTOM_LEFT">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Button>
+                        <Button fx:id="resetAleaPaP" disable="true" layoutX="45.0" layoutY="22.0" mnemonicParsing="false" onAction="#gererClicResetAleaPaP" prefHeight="75.0" prefWidth="180.0" text="Restart" textAlignment="CENTER" visible="false" wrapText="true" StackPane.alignment="BOTTOM_LEFT">
+                     <styleClass>
+                        <String fx:value="element" />
+                        <String fx:value="border" />
+                     </styleClass></Button>
+                    </StackPane>
+                </GridPane>
+            </StackPane>
+        </GridPane>
+    </center>
+</BorderPane>

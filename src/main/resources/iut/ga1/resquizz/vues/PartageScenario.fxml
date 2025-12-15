@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="fenetre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurPartageScenario">
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label fx:id="titre" alignment="CENTER" contentDisplay="CENTER" text="Partage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <ImageView fx:id="logoInformation" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicInformation" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets left="10.0" top="10.0" />
+                </GridPane.margin>
+                <Image url="@../images/info.png" />
+            </ImageView>
+        </GridPane>
+    </top>
+
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_RIGHT">
+            <Button fx:id="buttonRetour" mnemonicParsing="false" onAction="#gererClicRetour" prefHeight="65.0" prefWidth="180.0" text="Retour">
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass></Button>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+            <HBox prefHeight="369.0" prefWidth="1099.0">
+                <VBox prefHeight="446.0" prefWidth="600.0">
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints prefHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <Label fx:id="port" prefWidth="300.0" text="Port d'ouverture : " />
+                        <TextField fx:id="entreePort" text="5000" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                    </GridPane>
+                      <TextArea fx:id="consoleLog" />
+                    <Button fx:id="bouton" mnemonicParsing="false" onAction="#clicDemarrerPartage" prefHeight="58.0" prefWidth="266.0" text="Démarrer partage">
+                        <styleClass>
+                            <String fx:value="element" />
+                            <String fx:value="border" />
+                        </styleClass>
+                    </Button>
+                </VBox>
+                <VBox prefWidth="300.0">
+                    <Label fx:id="labelDonneesAPartager" text="Données partagées :">
+                        <VBox.margin>
+                            <Insets left="20.0" top="40.0" />
+                        </VBox.margin>
+                    </Label>
+                    <CheckBox fx:id="partageScenarios" mnemonicParsing="false" text="Scénarios">
+                        <VBox.margin>
+                            <Insets top="30.0" />
+                        </VBox.margin>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding></CheckBox>
+                    <CheckBox fx:id="partageParametres" mnemonicParsing="false" text="Paramètres">
+                        <VBox.margin>
+                            <Insets top="50.0" />
+                        </VBox.margin>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding></CheckBox>
+                </VBox>
+            <VBox prefHeight="360.0" prefWidth="310.0">
+               <children>
+                  <Label fx:id="libelleReseau" text="Interfaces réseau :" />
+                  <ScrollPane prefHeight="350.0" prefWidth="250.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox fx:id="interfacesReseau" layoutX="2.0" prefHeight="462.0" prefWidth="242.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

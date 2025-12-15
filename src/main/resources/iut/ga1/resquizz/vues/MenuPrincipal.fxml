@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="fenetre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurMenuPrincipal">
+   <center>
+       <VBox alignment="CENTER" cache="true" prefHeight="188.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+           <opaqueInsets>
+               <Insets />
+           </opaqueInsets>
+           <BorderPane.margin>
+               <Insets />
+           </BorderPane.margin>
+           <HBox alignment="CENTER">
+               <Button fx:id="buttonJeux" mnemonicParsing="false" onAction="#gererClicJeux" prefHeight="75.0" prefWidth="300.0" text="Jeux">
+                   <font>
+                       <Font size="24.0" />
+                   </font>
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass>
+               </Button>
+           </HBox>
+           <HBox alignment="CENTER">
+               <Button fx:id="buttonParametres" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#gererClicParametres" prefHeight="75.0" prefWidth="300.0" text="Paramètres">
+                   <font>
+                       <Font size="24.0" />
+                   </font>
+               <styleClass>
+                  <String fx:value="element" />
+                  <String fx:value="border" />
+               </styleClass>
+               </Button>
+           </HBox>
+       </VBox>
+   </center>
+   <bottom>
+       <HBox alignment="BOTTOM_RIGHT" BorderPane.alignment="CENTER">
+           <Button fx:id="buttonRetour" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#gererClicQuitter" prefHeight="65.0" prefWidth="180.0" text="Quitter">
+            <styleClass>
+               <String fx:value="element" />
+               <String fx:value="border" />
+            </styleClass></Button>
+       </HBox>
+   </bottom>
+   <top>
+       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <Label fx:id="titre" alignment="CENTER" text="ResQuizz">
+              <font>
+                  <Font size="64.0" />
+              </font>
+              <padding>
+                  <Insets top="50.0" />
+              </padding>
+           </Label>
+       </HBox>
+   </top>
+</BorderPane>

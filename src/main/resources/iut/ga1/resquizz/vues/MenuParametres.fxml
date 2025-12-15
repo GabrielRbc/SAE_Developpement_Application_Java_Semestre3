@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="fenetre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iut.ga1.resquizz.controleurs.ControleurMenuParametres">
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_RIGHT">
+            <Button fx:id="buttonRetour" mnemonicParsing="false" onAction="#gererClicRetour" prefHeight="65.0" prefWidth="180.0" text="Retour">
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass></Button>
+        </HBox>
+    </bottom>
+    <center>
+        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="75.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <ComboBox fx:id="ComboPolice" layoutX="20.0" layoutY="148.0" onAction="#gererClicPolice" prefHeight="75.0" prefWidth="300.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets right="50.0" />
+                </GridPane.margin>
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass>
+            </ComboBox>
+            <Button fx:id="buttonReseau" mnemonicParsing="false" onAction="#gererClicPartageScenario" prefHeight="75.0" prefWidth="300.0" text="Partage" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets left="50.0" />
+                </GridPane.margin>
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass>
+            </Button>
+            <Button fx:id="buttonStockage" mnemonicParsing="false" onAction="#gererClicStockage" prefHeight="75.0" prefWidth="300.0" text="Stockage" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets left="50.0" />
+                </GridPane.margin>
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass>
+            </Button>
+            <ComboBox fx:id="ComboResolution" onAction="#gererClicResolution" prefHeight="75.0" prefWidth="300.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets right="50.0" />
+                </GridPane.margin>
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="CouleurTheme" onAction="#gererClicCouleur" prefHeight="75.0" prefWidth="300.0" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets right="50.0" />
+                </GridPane.margin>
+                <styleClass>
+                    <String fx:value="element" />
+                    <String fx:value="border" />
+                </styleClass>
+            </ComboBox>
+         <ComboBox fx:id="ComboTaille" layoutX="260.0" layoutY="373.0" onAction="#gererTaillePolice" prefHeight="75.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <styleClass>
+               <String fx:value="element" />
+               <String fx:value="border" />
+            </styleClass>
+            <GridPane.margin>
+               <Insets left="50.0" />
+            </GridPane.margin>
+         </ComboBox>
+            <Label fx:id="labelTaillePolice" prefWidth="300.0" text="Taille de la police : " GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets left="50.0" top="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label fx:id="labelResolution" prefWidth="300.0" text="Choix de la résolution : " GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets right="50.0" top="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label fx:id="labelPolice" layoutX="260.0" layoutY="330.0" prefWidth="300.0" text="Choix de la police : " GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets right="50.0" top="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label fx:id="labelTheme" layoutX="260.0" layoutY="190.0" prefWidth="300.0" text="Choix du thème :  " GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets right="50.0" top="20.0" />
+                </GridPane.margin>
+            </Label>
+        </GridPane>
+    </center>
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label fx:id="titre" alignment="CENTER" contentDisplay="CENTER" text="Paramètres" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <ImageView fx:id="logoInformation" fitHeight="69.0" fitWidth="69.0" onMouseClicked="#gererClicInformation" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                <GridPane.margin>
+                    <Insets left="10.0" top="10.0" />
+                </GridPane.margin>
+                <Image url="@../images/info.png" />
+            </ImageView>
+        </GridPane>
+    </top>
+</BorderPane>

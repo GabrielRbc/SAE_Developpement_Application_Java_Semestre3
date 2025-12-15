@@ -1,0 +1,470 @@
+{
+  "arret_cardiaque": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je sécurise la zone pour éviter tout danger électrique ou mécanique.",
+        "Je m’assure que l’environnement est sûr avant d’intervenir.",
+        "Je dégage la victime de tout objet dangereux à proximité.",
+        "Je stabilise les lieux afin que personne ne se blesse pendant l’intervention.",
+        "Je protège la zone pour pouvoir agir sans risque."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "Je vérifie si la victime est consciente et réagit à mes appels.",
+        "Je secoue doucement les épaules et parle à la victime.",
+        "J’observe ses mouvements et tente de capter une réaction verbale ou gestuelle.",
+        "Je teste les réflexes de la victime et son état de conscience.",
+        "Je m’assure que la victime ne présente pas de signe de respiration spontanée."
+      ]
+    },
+    {
+      "pictogramme": 12,
+      "textes": [
+        "La victime ne respire plus, aucun mouvement thoracique n’est perceptible.",
+        "Aucun souffle n’est perceptible et le ventre reste immobile.",
+        "La victime est inconsciente et ne respire pas.",
+        "Absence totale de respiration et aucun mouvement thoracique visible.",
+        "La victime ne montre aucun signe de respiration, ni thoracique, ni buccal."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je demande immédiatement à quelqu’un d’appeler les secours.",
+        "Je contacte le 112 et reste en ligne pour suivre les instructions.",
+        "Je fais prévenir les secours tout en préparant la réanimation.",
+        "Je demande à un témoin d’alerter les services d’urgence immédiatement.",
+        "Je déclenche l’appel d’urgence en donnant la localisation exacte et l’état de la victime."
+      ]
+    },
+    {
+      "pictogramme": 22,
+      "textes": [
+        "Je commence un massage cardiaque avec insufflations.",
+        "Je pratique une réanimation cardio-pulmonaire continue.",
+        "Je débute le massage cardiaque conformément aux instructions des secours.",
+        "Je maintiens le rythme des compressions thoraciques et les insufflations.",
+        "Je poursuis le massage cardiaque jusqu’à la prise en charge par les secours."
+      ]
+    }
+  ],
+  "etouffement": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je crée un espace dégagé autour de la victime.",
+        "Je retire les objets dangereux proches de la victime.",
+        "Je sécurise les alentours pour éviter tout choc pendant l’étouffement.",
+        "Je veille à ce que la zone soit libre de tout obstacle.",
+        "Je protège la victime d’une chute ou d’un mouvement brusque."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "Je vérifie si la victime peut parler ou tousser.",
+        "J’observe les signes de détresse respiratoire.",
+        "Je constate si la respiration est audible ou s’il y a une obstruction totale.",
+        "Je vérifie si la victime peut expulser l’objet par elle-même.",
+        "J’évalue le degré d’obstruction des voies respiratoires."
+      ]
+    },
+    {
+      "pictogramme": 11,
+      "textes": [
+        "La victime ne peut émettre aucun son : étouffement total.",
+        "La victime devient bleue et ne parvient plus à respirer.",
+        "Aucun souffle ne sort de la bouche de la victime.",
+        "Obstruction complète des voies aériennes constatée.",
+        "La respiration est impossible et la voix absente : étouffement sévère."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je demande à un témoin d’alerter les secours immédiatement.",
+        "Je contacte le 112 et indique la nature de l’urgence.",
+        "Je fais prévenir les secours tout en me préparant à intervenir.",
+        "Je lance l’appel d’urgence pour un étouffement complet.",
+        "Je reste en ligne avec les secours pour suivre leurs instructions."
+      ]
+    },
+    {
+      "pictogramme": 21,
+      "textes": [
+        "Je pratique la manœuvre de Heimlich jusqu’à l’expulsion.",
+        "Je effectue des claques dorsales suivies de compressions abdominales.",
+        "Je répète les gestes de désobstruction jusqu’au rétablissement de la respiration.",
+        "Je continue la manœuvre de Heimlich tout en surveillant la respiration.",
+        "J’applique la technique de désobstruction conformément aux instructions de premiers secours."
+      ]
+    }
+  ],
+  "brulure": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je mets la victime à l’écart de la source de chaleur ou chimique pour éviter une aggravation.",
+        "Je coupe l’accès aux produits chimiques dangereux.",
+        "Je sécurise les lieux pour que personne ne touche la zone brûlée.",
+        "Je retire la victime de toute source de danger thermique.",
+        "Je veille à ce que la zone soit sécurisée avant d’intervenir sur la brûlure."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "J’examine la zone brûlée et demande à la victime de préciser la douleur.",
+        "J’évalue l’étendue et l’intensité de la brûlure.",
+        "Je questionne la victime sur l’origine et la localisation de la brûlure.",
+        "Je constate les signes visibles et écoute la victime pour identifier la zone touchée.",
+        "J’observe attentivement la brûlure et la réaction de la victime."
+      ]
+    },
+    {
+      "pictogramme": 15,
+      "textes": [
+        "La victime se plaint d’une brûlure et m’indique la zone touchée.",
+        "La victime montre une rougeur et une douleur sur sa peau.",
+        "La brûlure est clairement visible et douloureuse pour la victime.",
+        "La victime précise l’origine thermique ou chimique de la brûlure.",
+        "La douleur et l’apparence de la peau confirment une brûlure."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je contacte les secours si la brûlure est étendue ou d’origine chimique.",
+        "Je demande à un témoin d’appeler les secours.",
+        "J’alerte le 112 et explique la gravité de la brûlure.",
+        "Je fais prévenir les secours pour une intervention rapide.",
+        "Je reste en ligne avec les secours pour obtenir des instructions complémentaires."
+      ]
+    },
+    {
+      "pictogramme": 25,
+      "textes": [
+        "Je passe la zone brûlée sous l’eau tiède pendant 20 minutes.",
+        "Je refroidis la brûlure de façon continue pour limiter les dommages.",
+        "Je maintiens la zone sous l’eau tiède tout en rassurant la victime.",
+        "Je continue le refroidissement de la brûlure jusqu’à l’arrivée des secours.",
+        "Je m’assure que la brûlure reste sous eau tiède pendant la durée nécessaire."
+      ]
+    }
+  ],
+  "malaise": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je sécurise la zone et aide la victime à s’asseoir ou s’allonger.",
+        "Je retire tout objet dangereux proche de la victime.",
+        "Je stabilise la zone pour éviter une chute.",
+        "Je crée un espace dégagé autour de la victime.",
+        "Je m’assure que la victime est dans un environnement sûr."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "Je demande à la victime ce qu’elle ressent et observe son niveau de conscience.",
+        "Je surveille les signes de confusion ou de désorientation.",
+        "Je questionne la victime sur son identité et sa localisation.",
+        "Je note les symptômes et signes physiques du malaise.",
+        "J’évalue l’état de conscience et la capacité de répondre de la victime."
+      ]
+    },
+    {
+      "pictogramme": 14,
+      "textes": [
+        "La victime présente un malaise et semble confuse ou désorientée.",
+        "La victime ne sait pas où elle se trouve et ne répond pas correctement.",
+        "La victime a du mal à parler et semble perdue.",
+        "La victime se plaint de vertige ou de faiblesse.",
+        "La victime montre des signes de malaise généralisé."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je demande à quelqu’un de prévenir les secours.",
+        "Je contacte le 112 pour signaler le malaise.",
+        "Je fais appel à un témoin pour alerter les secours.",
+        "Je reste en ligne avec les secours pour obtenir des instructions.",
+        "Je signale l’état confus de la victime aux services d’urgence."
+      ]
+    },
+    {
+      "pictogramme": 23,
+      "textes": [
+        "Je place la victime en position latérale de sécurité et la surveille.",
+        "Je allonge la victime sur le côté et reste à ses côtés.",
+        "Je maintiens la victime en PLS jusqu’à l’arrivée des secours.",
+        "Je vérifie la respiration pendant que la victime est en PLS.",
+        "Je couvre la victime et la place en sécurité latérale."
+      ]
+    }
+  ],
+  "saignement": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je mets des gants et protège les lieux pour intervenir en sécurité.",
+        "Je stabilise la zone et écarte les témoins.",
+        "Je m’assure que personne ne risque de glisser sur le sang.",
+        "Je sécurise la zone pour pouvoir comprimer la plaie en toute sécurité.",
+        "Je crée un espace sécurisé autour de la victime."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "J’identifie l’emplacement et l’importance du saignement.",
+        "Je vérifie si la victime présente d’autres blessures.",
+        "J’évalue la gravité du saignement pour déterminer l’urgence.",
+        "Je constate la couleur et le flux du sang.",
+        "Je questionne la victime sur l’origine de la plaie."
+      ]
+    },
+    {
+      "pictogramme": 10,
+      "textes": [
+        "La victime saigne abondamment d’une plaie ouverte.",
+        "Le flux sanguin est important et nécessite une action immédiate.",
+        "La plaie provoque une perte de sang importante.",
+        "La victime est en saignement actif et ne peut arrêter le flux.",
+        "Le saignement est visible et met la victime en danger."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je contacte immédiatement les secours.",
+        "Je demande à un témoin d’appeler les services d’urgence.",
+        "J’explique la gravité de la situation au 112.",
+        "Je reste en ligne avec les secours pour obtenir des instructions.",
+        "Je signale le saignement important pour intervention rapide."
+      ]
+    },
+    {
+      "pictogramme": 20,
+      "textes": [
+        "J’exerce une compression ferme sur la plaie pour stopper le saignement.",
+        "Je maintiens la pression jusqu’à l’arrivée des secours.",
+        "Je place un pansement compressif et garde la victime allongée.",
+        "J’applique un garrot improvisé si nécessaire.",
+        "Je assure une pression continue sur la plaie et surveille l’état de la victime."
+      ]
+    }
+  ],
+  "blessure_visible": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je sécurise les lieux pour éviter tout risque supplémentaire.",
+        "Je protège la victime des chocs ou déplacements.",
+        "Je stabilise l’environnement pour pouvoir intervenir.",
+        "Je m’assure que personne ne risque de tomber sur la victime.",
+        "Je crée un espace sûr autour de la victime."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "Je regarde la blessure et demande à la victime comment elle s’est produite.",
+        "Je note la localisation et la gravité de la blessure.",
+        "Je vérifie la mobilité des membres affectés.",
+        "Je questionne la victime sur la douleur et les symptômes.",
+        "J’évalue les signes de fracture ou de contusion."
+      ]
+    },
+    {
+      "pictogramme": 16,
+      "textes": [
+        "La victime présente une blessure visible sur un membre.",
+        "La plaie est identifiable et nécessite un soin immédiat.",
+        "Une fracture ou un saignement léger est visible.",
+        "La zone blessée est clairement observable.",
+        "La victime indique la douleur sur la blessure visible."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "J’alerte les secours si la blessure semble grave.",
+        "Je demande à un témoin de contacter les services d’urgence.",
+        "Je reste en ligne avec les secours pour suivre leurs recommandations.",
+        "Je fournis les détails de la blessure aux secours.",
+        "Je contacte le 112 pour signaler l’incident et l’état de la victime."
+      ]
+    },
+    {
+      "pictogramme": 26,
+      "textes": [
+        "Je couvre et immobilise le membre blessé pour éviter l’aggravation.",
+        "J’applique de la glace si nécessaire et immobilise la zone.",
+        "Je stabilise la fracture ou la plaie avant l’arrivée des secours.",
+        "Je maintiens la blessure propre et protégée.",
+        "J’assure la sécurité et l’immobilisation de la zone affectée."
+      ]
+    }
+  ],
+  "danger_electrique": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je sécurise la zone et empêche tout contact avec l’électricité.",
+        "Je coupe le courant si possible avant d’intervenir.",
+        "Je éloigne les témoins et la victime de l’installation électrique.",
+        "Je crée un périmètre de sécurité autour de la source électrique.",
+        "Je m’assure qu’aucune personne ne touche le danger électrique."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "Je vérifie l’état de la victime après électrisation.",
+        "J’évalue la conscience et la respiration de la victime.",
+        "Je recherche des brûlures visibles ou des blessures secondaires.",
+        "Je questionne la victime sur ses sensations.",
+        "J’observe la couleur de la peau et les signes de choc."
+      ]
+    },
+    {
+      "pictogramme": 7,
+      "textes": [
+        "La victime a été électrisée et présente des brûlures ou choc électrique.",
+        "Signes de brûlures et faiblesse musculaire après contact électrique.",
+        "La victime se plaint de douleurs ou de picotements.",
+        "La victime semble inconsciente ou confuse après électrisation.",
+        "La victime montre des brûlures visibles et une respiration altérée."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je contacte immédiatement les secours pour électrisation.",
+        "Je demande à un témoin d’appeler le 112.",
+        "Je reste en ligne avec les secours et leur explique la situation.",
+        "J’indique la gravité de l’électrisation aux secours.",
+        "Je fournis l’état de conscience et les signes visibles aux services d’urgence."
+      ]
+    },
+    {
+      "pictogramme": 17,
+      "textes": [
+        "Je supprime le danger électrique identifié avant d’intervenir.",
+        "Je coupe le courant pour sécuriser la victime.",
+        "Je m’assure que la source électrique est isolée avant les soins.",
+        "J’empêche tout contact de la victime avec le courant.",
+        "Je stabilise la zone électrique pour sécuriser les premiers secours."
+      ]
+    }
+  ],
+  "danger_thermique": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je mets la victime à l’écart de la source de chaleur.",
+        "Je sécurise l’environnement pour éviter une propagation du danger.",
+        "Je coupe l’accès aux produits thermiques ou chimiques dangereux.",
+        "Je éloigne les témoins et la victime du danger thermique.",
+        "Je m’assure que la zone est sécurisée avant d’intervenir."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "J’observe les blessures et la zone affectée par la chaleur ou produit chimique.",
+        "Je questionne la victime sur l’origine et l’intensité de la douleur.",
+        "Je constate la zone touchée et sa gravité.",
+        "Je recherche des signes de brûlure superficielle ou profonde.",
+        "J’évalue la réaction de la victime à la douleur."
+      ]
+    },
+    {
+      "pictogramme": 8,
+      "textes": [
+        "La victime est touchée par un produit chimique ou thermique.",
+        "La peau présente une brûlure ou irritation.",
+        "La victime se plaint de douleur intense due à un produit dangereux.",
+        "La zone touchée est rouge ou enflée.",
+        "La victime indique l’origine chimique ou thermique du danger."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je contacte les secours si la brûlure ou exposition est grave.",
+        "Je demande à un témoin d’alerter le 112.",
+        "Je reste en ligne avec les secours pour obtenir des instructions.",
+        "Je précise l’origine et la gravité de la brûlure aux secours.",
+        "Je signale toute exposition chimique ou thermique aux services d’urgence."
+      ]
+    },
+    {
+      "pictogramme": 25,
+      "textes": [
+        "Je passe la zone touchée sous l’eau tiède pendant 20 minutes.",
+        "Je continue le refroidissement de la zone touchée.",
+        "Je maintiens la zone sous eau tiède et rassure la victime.",
+        "Je veille à ce que la brûlure soit refroidie correctement.",
+        "Je surveille la victime pendant le refroidissement jusqu’aux secours."
+      ]
+    }
+  ],
+  "atmosphere_toxique": [
+    {
+      "pictogramme": 0,
+      "textes": [
+        "Je sécurise la zone et empêche toute exposition supplémentaire.",
+        "Je retire la victime de l’atmosphère toxique.",
+        "Je éloigne les témoins et sécurise l’accès à la zone.",
+        "Je m’assure que l’environnement immédiat est sûr pour intervenir.",
+        "Je crée un périmètre de sécurité autour de la zone dangereuse."
+      ]
+    },
+    {
+      "pictogramme": 1,
+      "textes": [
+        "J’évalue la respiration et l’état de conscience de la victime.",
+        "Je vérifie la coloration de la peau et les signes de suffocation.",
+        "Je questionne la victime sur ses sensations respiratoires.",
+        "J’observe si la victime tousse ou a des difficultés à respirer.",
+        "J’évalue les symptômes liés à l’exposition toxique."
+      ]
+    },
+    {
+      "pictogramme": 9,
+      "textes": [
+        "La victime présente des signes d’intoxication par inhalation.",
+        "La respiration est difficile et la peau peut devenir bleue.",
+        "La victime semble inconsciente ou confuse après exposition.",
+        "La victime tousse et se plaint de brûlures internes.",
+        "Les symptômes indiquent une atmosphère toxique."
+      ]
+    },
+    {
+      "pictogramme": 2,
+      "textes": [
+        "Je contacte immédiatement les secours pour une intoxication.",
+        "Je demande à un témoin d’appeler le 112.",
+        "Je reste en ligne et fournis tous les détails de la situation.",
+        "Je signale la présence de fumée ou gaz toxique aux secours.",
+        "J’explique l’état de la victime et l’environnement dangereux aux secours."
+      ]
+    },
+    {
+      "pictogramme": 19,
+      "textes": [
+        "J’évacue la victime de l’atmosphère toxique vers un lieu sûr.",
+        "Je déplace la victime à l’extérieur et surveille sa respiration.",
+        "J’isole la victime du danger et m’assure qu’elle respire.",
+        "Je place la victime dans un environnement sécurisé et oxygéné.",
+        "Je garde la victime à l’écart de la zone toxique jusqu’à l’arrivée des secours."
+      ]
+    }
+  ]
+}
